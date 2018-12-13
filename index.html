@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0px;          
+        }
+        #boxes {
+            width: 470px;
+            height: 316px;
+            margin: 0 auto;
+            transform: translateY(50%);
+            top:-50%;
+        }
+        #boxes div {
+            position: relative;
+            width: 146px;
+            height: 146px;
+            background-color: red;
+            float: left;
+            margin: 8px;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+        #boxes div span {
+            
+            display: block;
+            position: relative;
+            top: 25px;
+            left: 50%;
+            color: #FFF;
+            font-size: 20px;
+        }
+        #boxes div:nth-child(2),
+        #boxes div:nth-child(5){
+            margin: 8px 0;
+        }
+        #boxes div:nth-child(4),
+        #boxes div:nth-child(5),
+        #boxes div:nth-child(6){
+            margin-top: 0;
+        }
+        #boxes div:first-child {
+            border: 14px solid rgba(255, 255, 255, .5);
+            border-radius:65.625%  34.375% 34.275% 65.625% / 58.593% 58.593% 41.406% 41.406% ;
+        }
+        .bgc {
+            height:100%;
+            width:100%;
+            background-color: pink;
+            position: fixed;
+            top: 0;
+            z-index: -5;
+            opacity:0.4;
+        }
+    </style>
+</head>
+<body>
+<!------------------------------------------------------------------------------->
+    <!-- 中间盒子 -->
+    <div id="boxes">
+        <div style="background-color: #f44336"></div>
+        <div style="background-color: #e91e63"></div>
+        <div style="background-color: #9c27b0"></div>
+        <div style="background-color: #2196f3"></div>
+        <div style="background-color: #4caf50"></div>
+        <div style="background-color: #ff9800"></div>
+    </div>
+    <!-- 背景颜色盒子 -->
+    <div class="bgc" id="bgc"></div>
+<!-- ------------------------------------------------------------------------- -->
+
+<script src="./animation.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
